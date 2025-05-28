@@ -53,7 +53,7 @@ You can add these `export` commands to your `~/.bash_profile` script to define t
 Or, provide the SSID directly on the command line:
 
 ```bash
-./hotspot_connect.sh --ssid yourHotspotSSID
+./hotspot_connect.sh --ssid "Your Hotspot SSID"
 ```
 The script will ask for your SSID password in order to connect.
 
