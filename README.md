@@ -27,7 +27,7 @@ After struggling with this problem myself, I discovered that restarting the netw
 
 Before running the script, **you must make your iPhone’s Personal Hotspot discoverable**.
 
-🔓 **Important:** Even if *"Allow Others to Join"* is enabled, iPhones often **do not advertise the hotspot over Wi-Fi** unless explicitly made discoverable. You can do this in two ways:
+🔓 **Important:** Even if *"Allow Others to Join"* is enabled, iPhones often do not advertise the hotspot over Wi-Fi unless explicitly made discoverable. You can do this in two ways:
 
 - **Settings method:**  
   Open **Settings → Personal Hotspot** and keep the screen open. This reliably makes the hotspot visible to nearby devices.
@@ -43,7 +43,7 @@ Once your hotspot is discoverable on your iPhone, run the script using either me
 Define SSID and password through environment variables.
 
 ```bash
-export HOTSPOT_NAME='MarkusPhone'
+export HOTSPOT_NAME='yourHotspotSSID'
 export HOTSPOT_PASSWORD='yourpassword'
 ./hotspot_connect.sh
 ```
@@ -53,7 +53,7 @@ You can add these `export` commands to your `~/.bash_profile` script to define t
 Or, provide the SSID directly on the command line:
 
 ```bash
-./hotspot_connect.sh --ssid MarkusPhone
+./hotspot_connect.sh --ssid yourHotspotSSID
 ```
 The script will ask for your SSID password in order to connect.
 
@@ -63,7 +63,21 @@ The script will ask for your SSID password in order to connect.
 ./hotspot_connect.sh --help
 ```
 
-## ⚙️ What It Does
+## 📱 What's My iPhone hotspot SSID name?
+
+By default, your iPhone’s hotspot SSID is the same as the device name, typically following this format:
+"\<YourName\>’s iPhone", e.g., `John’s iPhone`.
+
+You can find your current hotspot name by:
+
+- **Opening the Wi-Fi menu** from the top-right menu bar on your Mac — the hotspot name will appear there when your iPhone is discoverable.
+- Or by going to **Settings → General → About → Name** on your iPhone to view or change it.
+
+> ⚠️ **Note:** macOS and command-line tools may misinterpret certain characters (like the curly apostrophe `’`).  
+> For best results when using this script, consider renaming your iPhone to something simpler, like `MarkusPhone` or `MyiPhone` — avoiding spaces, quotes, and punctuation.
+ 
+
+## ⚙️ What The Script Does
 
 1. Detects your Mac’s Wi-Fi interface
 2. Turns on Wi-Fi if disabled
@@ -98,7 +112,7 @@ The script traps `SIGINT` and `SIGTERM` to:
 🧹 Flushing DNS cache...
 🔄 Renewing DHCP lease...
 🛑 Disabling IPv6 for better hotspot stability...
-📡 Connecting to hotspot: MarkusPhone...
+📡 Connecting to hotspot: MyHotspotSSID...
 ⏳ Waiting for Wi-Fi connection to stabilize...
 ✅ Detected WiFi connection. IP Address: 172.20.10.5
 ⏱ Connected for: 00:03:45
