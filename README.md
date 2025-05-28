@@ -25,20 +25,37 @@ After struggling with this problem myself, I discovered that restarting the netw
 
 ## 🚀 Usage
 
-### Option 1: Using environment variables
+Before running the script, **you must make your iPhone’s Personal Hotspot discoverable**.
+
+🔓 **Important:** Even if *"Allow Others to Join"* is enabled, iPhones often **do not advertise the hotspot over Wi-Fi** unless explicitly made discoverable. You can do this in two ways:
+
+- **Settings method:**  
+  Open **Settings → Personal Hotspot** and keep the screen open. This reliably makes the hotspot visible to nearby devices.
+  
+- **Control Center method:**  
+  Swipe down from the top right of the screen to open **Control Center**, long-press the tile with Wi-Fi/Bluetooth, and tap the **Personal Hotspot icon** to turn it on. This also makes the hotspot discoverable for a short time.
+
+> 💡 Tip: If the script fails to connect immediately, double-check that your hotspot is visible using one of the methods above.
+
+Once your hotspot is discoverable on your iPhone, run the script using either method below:
+
+### Envrionment Variables
+Define SSID and password through environment variables.
 
 ```bash
-export HOTSPOT_NAME="YourHotspotSSID"
-export HOTSPOT_PASSWORD="YourHotspotPassword"
+export HOTSPOT_NAME='MarkusPhone'
+export HOTSPOT_PASSWORD='yourpassword'
 ./hotspot_connect.sh
 ```
+You can add these `export` commands to your `~/.bash_profile` script to define them permanently.
 
-### Option 2: Prompting for password
+### Command Line Argument
+Or, provide the SSID directly on the command line:
 
 ```bash
-./hotspot_connect.sh --ssid YourHotspotSSID
-# You'll be prompted for the password securely
+./hotspot_connect.sh --ssid MarkusPhone
 ```
+The script will ask for your SSID password in order to connect.
 
 ### Help
 
