@@ -4,9 +4,9 @@ A robust and user-friendly Bash script to reliably connect your Mac to an iPhone
 
 ### ✨ Why This Script?
 
-macOS has long struggled with reliably joining iPhone Personal Hotspots. Users have been complaining online about Apple hotspot connection problems, e.g., in this [Reddit discussion](https://www.reddit.com/r/iphone/comments/138ec2r/apple_iphone_hotspot_problem). 
+Connecting to an iPhone Personal Hotspot on macOS has long been unreliable. Many users have reported persistent issues, such as those described in this [Reddit thread](https://www.reddit.com/r/iphone/comments/138ec2r/apple_iphone_hotspot_problem).
 
-I have struggled to connect my MacBook to my iPhone hotspot for a long time. Everntually, after some experimentation, I found that restarting the network and disabling IPv6 works for me. This script automates this process. It makes hotspot connections **predictable**, **repeatable**, and **fail-safe**.
+After struggling with this problem myself, I discovered that restarting the network interface and disabling IPv6 consistently resolved the issue. This script automates that process — making hotspot connections **predictable**, **repeatable**, and far more **reliable**.
 
 
 ## ✅ Features
