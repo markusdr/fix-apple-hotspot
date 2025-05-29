@@ -43,8 +43,8 @@ Once your hotspot is discoverable on your iPhone, run the script using either me
 Define SSID and password through environment variables.
 
 ```bash
-export HOTSPOT_NAME='yourHotspotSSID'
-export HOTSPOT_PASSWORD='yourpassword'
+export HOTSPOT_NAME='Your Hotspot SSID'
+export HOTSPOT_PASSWORD='YourHotSpotPassword'
 ./hotspot_connect.sh
 ```
 You can add these `export` commands to your `~/.bash_profile` script to define them permanently.
@@ -74,7 +74,7 @@ You can find your current hotspot name by:
 - Or by going to **Settings → General → About → Name** on your iPhone to view or change it.
 
 > ⚠️ **Note:** macOS and command-line tools may misinterpret certain characters (like the curly apostrophe `’`).  
-> For best results when using this script, consider renaming your iPhone to something simpler, like `MarkusPhone` or `MyiPhone` — avoiding spaces, quotes, and punctuation.
+> For best results when using this script, consider renaming your iPhone to something simpler, like `JohnsPhone` or `MyiPhone` — avoiding spaces, quotes, and punctuation.
  
 
 ## ⚙️ What The Script Does
@@ -112,9 +112,9 @@ The script traps `SIGINT` and `SIGTERM` to:
 🧹 Flushing DNS cache...
 🔄 Renewing DHCP lease...
 🛑 Disabling IPv6 for better hotspot stability...
-📡 Connecting to hotspot: MyHotspotSSID...
+📡 Connecting to hotspot: JohnsPhone...
 ⏳ Waiting for Wi-Fi connection to stabilize...
-✅ Detected WiFi connection. IP Address: 172.20.10.5
+✅ Detected WiFi connection. IP Address: 175.32.20.3
 ⏱ Connected for: 00:03:45
 ```
 
